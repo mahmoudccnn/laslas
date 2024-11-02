@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image with Toggle Data Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="p2p2p2.jpg" alt="Sample Image" class="main-image">
+
+        <button onclick="showData('dat')" class="toggle-button">Show Data</button>
+        
+        <div id="dat" class="data-content">
+            <p>
+               
+
+
+                الاسم :احمد خالد عبدالستار 
+                التخصص :خصائى علاج وظيفى وتكامل حسي وتحفيز عصبى
+                الدرجه العلميه : باحث ماجستير
+                خبرة ٤ سنوات
+                خريج كلية تربية خاصة جامعة مصر
+                
+                حاصل علي بكالوريوس علوم فى الاحتياجات الخاصة
+                
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="p2.jpg" alt="Sample Image" class="main-image">
+
+        <button onclick="showData('data111')" class="toggle-button">Show Data</button>
+        
+        <div id="data111" class="data-content">
+            <p>
+                 
+                الاسم: هاجر محمود زينهم 
+                الخبرة: سنة 
+                خريجة: 2024
+                         كلية: التربية الخاصة 
+                تخصص: إعاقة حركية
+                جامعة: مصر لعلوم والتكنولوجيا
+                طالبة دراسات عليا (دبلومة مهنية)
+                البرامج التي قيمتها:
+                 بورتاج ، لوفاس , 
+                ABA
+                أماكن اشتغلت فيها من قبل:
+                أطفالنا تقدر، مركز القادة، مركز عيادات الجيزة التخصصية، مركز دريم للعلاج الطبيعي، مركز نبتة للتأهيل والتخاطب
+                جمعية كيان، جمعية اليسر، جمعية اديو كير 
+                محل الإقامة: حدائق أكتوبر فيلا 33 المنطقة الثانية
+            </p>
+        </div>
+    </div>
+
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #26acd4;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            width: 80%;
+        }
+
+        .main-image {
+            max-width: 50vw;
+            height: 50vh;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .toggle-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #b8980b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-button:hover {
+            background-color: #b30068;
+        }
+
+        .data-content {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            color: #333;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+
+    <script>
+        function showData(id) {
+            const dataContent = document.getElementById(id);
+
+            // Toggle the display of the data content
+            if (dataContent.style.display === "none" || dataContent.style.display === "") {
+                dataContent.style.display = "block";
+            } else {
+                dataContent.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+
+
+p4<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image with Toggle Data Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="p14.jpg" alt="Sample Image" class="main-image">
+
+        <button onclick="showData()" class="toggle-button">Show Data</button>
+        
+        <div id="data" class="data-content">
+            <!-- The content you want to display on button click -->
+            <p>
+               
+الإسم: أسماء محمد شعراوي.
+المؤهلات العلمية:
+_ ليسانس آداب علم نفس، جامعة عين شمس.
+_ ماجستير علم النفس الإكلينكي للفئات الخاصة.
+_ دورة في التقييم النفسي للأطفال.
+_ دورة تدريبية في اضطراب التعلم المحدد.
+_ دبلوم تخاطب بمركز زايد الطبي.
+_ التدريب في عيادة التوحد للأطفال بمستشفى الصحة النفسية بالعباسية.
+_ ورش عمل في برامج التدخل المبكر.
+الخبرة: (٦) سنوات
+            </p>
+        </div>
+    </div>
+
+    <style>
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #26acd4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+}
+
+.main-image {
+    max-width: 50vw;
+    height: 50vh;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #b8980b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #b30068;
+}
+
+.data-content {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+}
+
+    </style>
+    
+    
+    <script>
+function showData() {
+    const dataContent = document.getElementById("data");
+
+    // Toggle the display of the data content
+    if (dataContent.style.display === "none" || dataContent.style.display === "") {
+        dataContent.style.display = "block";
+    } else {
+        dataContent.style.display = "none";
+    }
+}
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
